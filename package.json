@@ -1,7 +1,7 @@
 {
-  "name": "my_first_node_app",
+  "name": "my-code-test",
   "version": "1.0.0",
-  "description": "Nodejs Recfatory Class App",
+  "description": "NodejsApp",
   "main": "index.js",
   "scripts": {
     "test": "jest",
@@ -31,13 +31,6 @@
     "coveragePathIgnorePatterns": [
       "/node_modules/"
     ]
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/jarigye/refactorycohort3.git"
-  },
-  "bugs": {
-    "url": "https://github.com/jarigye/refactorycohort3/issues"
-  },
-  "homepage": "https://github.com/jarigye/refactorycohort3#readme"
+  }
+  
 }
