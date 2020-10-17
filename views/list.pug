@@ -1,0 +1,50 @@
+extends layout
+block content
+    br
+    br
+    
+    div.row.justify-content-center
+        div.col-md-7
+            header.card-header
+                h1.card-title.text-center Registered users
+                b Hello, #{currentUser.firstname}  
+            |&nbsp
+            div.form-row
+                div.col.form-group.col-md-9    
+                    form.search(action='/register/search')
+                        div.form-row
+                            div.col-md-8
+                                input.form-control(name='city' placeholder="Enter your search term ...")
+                            div.col-md-4
+                                input.btn.btn-success.btn-block(type="submit")
+                div.col.form-group.col-md-3    
+                    form(method="post" action='/logout')
+                        button.btn.btn-dark.btn-block(type="submit") Log out
+            table.table
+                thead.thead-dark
+                    tr
+                        th Firstname
+                        th Lastname
+                        th City
+                        th 
+                tbody
+                    each user in users
+                        tr
+                            td #{user.firstname}
+                            td #{user.lastname}
+                            td #{user.city}
+                            td
+                                form(method="post" action='/register/edit')
+                                    input(type="hidden", placeholder="", name="id", value=user._id)
+                                    button.btn.btn-info.btn-block(type="submit") Edit
+                                
+                                form(method="post" action='/register/update')
+                                    input(type="hidden", placeholder="", name="id", value=user._id)
+                                    button.btn.btn-dark.btn-block(type="submit") Update
+                                
+                                form(method="post" action='/register/delete')
+                                    input(type="hidden", placeholder="", name="id", value=user._id)
+                                    button.btn.btn-danger.btn-block(type="submit") Delete
+                                
+                                
+

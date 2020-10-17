@@ -1,0 +1,29 @@
+extends layout
+block content
+    br
+    br
+    br
+    br
+    br
+    div.row.justify-content-center
+
+        div.col-md-5
+            div.card-body.border
+                header.card-header
+                    h1.card-title.text-center Login 
+                if error
+                    div.alert.alert-danger #{error}
+                form(method="POST" action='/login')
+                    br
+                    br
+                    div.form-row
+                        div.col.form-group
+                            label User name
+                            input.form-control(name="username")
+                    div.form-row
+                        div.col.form-group
+                            label Enter Password
+                            input.form-control(type="password" name="password")
+                    div.form-row
+                        div.col.form-group
+                            button.btn.btn-info.btn-block Login 

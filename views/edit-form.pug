@@ -1,0 +1,27 @@
+extends layout
+block content
+    br
+    br
+    br
+    br
+    div.row.justify-content-center
+        br
+        
+        form(action="/edit" method="POST")
+            .form-group
+                h2.card-title.text-center Editing Registered Users
+                input#title.form-control(type="text" name="title" value="editing the database")
+            .form-group
+                h2.card-title.text-center FirstName
+                input#title.form-control(type="text" name="title" value="")
+            .form-group
+                h2.card-title.text-center LastName
+                input#title.form-control(type="text" name="title" value="")
+            .form-group
+                h2.card-title.text-center City
+                input#title.form-control(type="text" name="title" value="")
+            .form-group
+                label(for="description") Description:
+                textarea#description.form-control(name="description")
+            input(type="hidden" name="_id" value="editing the database")
+            button.btn.btn-info(type="submit") Submit

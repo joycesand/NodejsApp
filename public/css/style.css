@@ -1,0 +1,189 @@
+body {
+  text-align: center;
+  background: #f7f7f7;
+  font-size: 14px;
+  line-height: 85%;
+  width: 100%
+}
+@import url("https://fonts.googleapis.com/css?family=Quicksand:400,500,700|Comfortaa:300,400,500,700");
+.body
+{
+    font-family: 'Comfortaa';
+    overflow: hidden;
+    
+}
+.continer-fluid
+{
+    max-height: auto;
+}
+.divide
+{
+    height: 1px;
+    background: #fff;
+    border: 1;
+}
+.home_banner_area {
+  position: relative;
+  z-index: 1;
+  background: #000;
+  margin-bottom: 120px; }
+  .home_banner_area .box_1620 {
+    background: url(money.jpg) no-repeat scroll center;
+    background-size: cover;
+    min-height: 100vh;
+    border-radius: 12px;
+    position: relative;
+    bottom: -120px; }
+  .home_banner_area .banner_inner {
+    position: relative;
+    width: 100%;
+    min-height: 100vh;
+    display: flex; }
+    .home_banner_area .banner_inner .banner_content {
+      color: #fff;
+      vertical-align: middle;
+      align-self: center; }
+      .home_banner_area .banner_inner .banner_content h5 {
+        text-transform: uppercase;
+        font-family: "Quicksand", sans-serif;
+        font-size: 14px;
+        font-weight: normal;
+        margin-bottom: 15px; }
+      .home_banner_area .banner_inner .banner_content h3 {
+        font-size: 80px;
+        font-family: "PT Serif", serif;
+        font-weight: bold;
+        margin-bottom: 20px;
+        line-height: 76px; }
+      .home_banner_area .banner_inner .banner_content p {
+        font-size: 14px;
+        line-height: 24px;
+        font-family: "Roboto", sans-serif;
+        font-weight: normal;
+        max-width: 620px;
+        margin: auto; }
+      .home_banner_area .banner_inner .banner_content .main_btn {
+        margin-top: 40px; }
+.home-bg
+{
+    align-content: center;;
+    width: 100%;
+    background-position: center;
+     /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #dc2430, #7b4397);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #dc2430, #7b4397); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    opacity: 0.7;
+    height: 100vh;
+}
+.card
+{    
+    background-color: rgb(255, 205, 176);
+    background: -webkit-linear-gradient(to right, #dc2430, #7b4397);
+    background: linear-gradient(to bottom, rgb(255, 181, 137), rgb(255, 205, 176));
+}
+
+.form-side
+{
+    border-top-left-radius: 15px;
+    border-bottom-left-radius: 15px;
+}
+
+.home-fg-text
+{
+    position: absolute;
+    top: 320px;
+    left: 80px;
+    font-family: "Comfortaa";
+    font-weight: bold;
+    font-size: 40px;
+    color: rgb(39, 19, 129);
+}
+.home-fg-image
+{
+    height: 100vh;
+}
+.home-fg-namer
+{
+    position: absolute;
+    top: 120px;
+    left: 56px;
+    font-family: "Comfortaa";
+    font-weight: bold;
+    font-size: 40px;
+    color: rgb(39, 19, 129);;
+}
+.form-control {
+    border: 0;
+}
+.form-control-no-border:focus {
+    border:0;
+    outline: 0;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+}
+.sidebar-sticky
+{
+    background:whitesmoke;
+    background-color: coral;
+    border-top-left-radius: 70px;
+    border-bottom-left-radius: 70px;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px; 
+    overflow: hidden;
+    height: 100vh;
+     /* fallback for old browsers */
+    /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+}
+.nav-link::before {
+  height: 20px;
+  width: 100%;
+  width: calc(100% - 36px);
+  border-bottom-right-radius:20px;
+  border-bottom: 1px solid whitesmoke;
+  border-right: solid 2px whitesmoke;
+  
+  transform: skewX(-60deg);
+}
+.nav-link::after {
+  height: calc(100% - 19px);
+  border-left: 1px solid coral;
+}
+.nav-link, .nav-link:hover{
+    color: whitesmoke;  
+    position: relative;
+    
+}
+
+
+.active:hover{
+   color: coral;  
+    position: relative;
+}
+.active
+{
+    background-color: rgb(245, 245, 245);
+    opacity: 1;
+    border-top-left-radius: 18px;
+    border-bottom-left-radius: 18px;
+    color: coral;
+}
+.mainer
+{
+    height: 100%;
+    /*overflow-y: scroll;*/
+}
+
+    /*-ms-overflow-style: none !important;*/
+
+
+.thead-light-bg
+{
+ background-color: coral;
+ color: #fff;
+}
+.btn-card:hover
+{
+    height: 50px;
+    text-align: center;
+}
