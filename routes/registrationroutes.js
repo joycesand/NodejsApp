@@ -10,7 +10,7 @@ var db = require('mongodb').db;
 // gets and displays a register page
 router.get('/', (req, res) => {
     res.render('register')
-})
+});
 
 // using passport for authentications
 router.post('/', function(req, res) {
@@ -67,16 +67,17 @@ router.post('/delete', async (req, res) => {
     } catch (err) {
         res.status(500).send('unable to delete from database')
     }
-})
+});
 
 // Updated Items
-router.post("/", (req, res) => {
+router.post("/updated", (req, res) => {
     res.render('updated', {user: req.userId});
   });
   
 // Edited Items
-router.post("/", (req, res) => {
+router.post("/edited", (req, res) => {
 res.render('edited', {user: req.userId});
+
 });
 
 
