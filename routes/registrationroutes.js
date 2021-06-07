@@ -18,18 +18,18 @@ router.post('/', function(req, res) {
         if (err) {
             return res.render('register');
         }
-        passport.authenticate('local')(req, res, function () {
+        passport.authenticate('local')(req, res, function() {
             res.redirect('/login');
         });
     });
-  });
+});
 
 
 
 //returns a specific page
-router.get('/search', async (req, res) => {
+router.get('/profile', async(req, res) => {
     if (req.session.user) {
-         console.log(req.session.user)
+        console.log(req.session.user)
         try {
             // let allows for variable reassigment
             let items = await Register.find()
@@ -48,19 +48,19 @@ router.get('/search', async (req, res) => {
 
 
 //edit  items
-router.post('/edit', function(req, res){
-    res.render('edit-form', {user: req.userId});
-    });
-   
+router.post('/edit', function(req, res) {
+    res.render('edit-form', { user: req.userId });
+});
+
 //Update Items
-router.post('/update', function(req, res){
-    res.render('update-form', {user: req.userId});
-    });
-     
-   
+router.post('/update', function(req, res) {
+    res.render('update-form', { user: req.userId });
+});
+
+
 
 //deletes a specific item
-router.post('/delete', async (req, res) => {
+router.post('/delete', async(req, res) => {
     try {
         await Register.deleteOne({ _id: req.body.id })
         res.redirect('back')
@@ -71,18 +71,14 @@ router.post('/delete', async (req, res) => {
 
 // Updated Items
 router.post("/updated", (req, res) => {
-    res.render('updated', {user: req.userId});
-  });
-  
+    res.render('updated', { user: req.userId });
+});
+
 // Edited Items
 router.post("/edited", (req, res) => {
-res.render('edited', {user: req.userId});
+    res.render('edited', { user: req.userId });
 
 });
 
 
 module.exports = router;
-
-
-
-

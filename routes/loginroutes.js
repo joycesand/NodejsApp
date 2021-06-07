@@ -10,19 +10,19 @@ router.get('/', (req, res) => {
 
 // submits a login page information
 //router.post('/', async(req, res) => {
-    // try{
-    //     const user = await Register.authenticate(req.body.username, req.body.password);
-    //     req.session.user = user;
-    //     res.redirect('register/search')
-    // }catch{
-    //      res.render('login',{ error: "Failed to login, please try again" })
-    // }
+// try{
+//     const user = await Register.authenticate(req.body.username, req.body.password);
+//     req.session.user = user;
+//     res.redirect('register/search')
+// }catch{
+//      res.render('login',{ error: "Failed to login, please try again" })
+// }
 //})
 
 
 router.post('/', passport.authenticate('local'), function(req, res) {
     req.session.user = req.user;
-    res.redirect('/register/search');
+    res.redirect('/register/profile');
 });
 
-module.exports = router; 
+module.exports = router;
